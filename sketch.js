@@ -124,9 +124,14 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
   waveV.noLoop();
   waveH.noLoop();
   dotMatrix.noLoop();
-
-  p.pixelDensity(3);
-  p2.pixelDensity(3);
+  if(isFxpreview == true || isMobile == true) {
+    p.pixelDensity(1);
+    p2.pixelDensity(1);
+  } else {
+    p.pixelDensity(3);
+    p2.pixelDensity(3);
+  }
+  
   p.angleMode(DEGREES);
   p2.angleMode(DEGREES);
   angleMode(DEGREES);
